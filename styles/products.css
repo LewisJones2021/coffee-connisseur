@@ -1,0 +1,364 @@
+/** @format */
+
+/* font imports*/
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&family=Shadows+Into+Light&display=swap'); */
+
+/* remove browser styles default (CSS reset) */
+
+/* Box sizing rules */
+html {
+ box-sizing: border-box;
+ height: 100%;
+}
+*,
+*:before,
+*:after {
+ box-sizing: inherit;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+ margin: 0;
+ padding: 0;
+}
+
+/* Set font size and line height */
+body {
+ line-height: 1.4;
+ font-family: sans-serif;
+}
+
+/* Remove list styles on ul and ol elements */
+ul,
+ol {
+ list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+ text-decoration: none;
+ color: inherit;
+}
+
+/* Set default display to block for all HTML5 elements */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section summary {
+ display: block;
+}
+
+/* Set default border to none */
+img,
+video {
+ border: none;
+}
+
+/* Set default max-width to 100% */
+img {
+ max-width: 100%;
+}
+
+/* Remove outline on focus */
+:focus {
+ outline: none;
+}
+
+* {
+ margin: 0;
+ box-sizing: border-box;
+}
+
+body {
+ background-color: rgba(210, 180, 140, 0.585);
+ font-family: sans-serif;
+ display: flex;
+ flex-direction: column;
+
+ min-height: 100%;
+}
+
+body h1 {
+ font-size: 20px;
+ font-weight: 300;
+ background-color: rgb(169, 92, 16);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: white;
+ padding: 10px;
+}
+
+header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 15px;
+ margin: 5px;
+}
+
+.header-nav ul {
+ display: flex;
+ justify-content: space-between;
+}
+.header-nav li {
+ padding-left: 8px;
+ list-style: none;
+ text-transform: uppercase;
+ font-family: sans-serif;
+}
+.header-nav li:hover {
+ color: rgb(169, 92, 16);
+ cursor: pointer;
+}
+.header-img {
+ width: 50px;
+ height: 50px;
+}
+
+.mobile-nav {
+ display: none;
+ z-index: 50;
+ background-color: rgba(0, 0, 0, 0.601);
+ position: fixed;
+ top: 0;
+ left: 0;
+ max-width: 30%;
+ height: 100vh;
+ padding: 10px;
+ transition: ease-in-out;
+ transition-duration: 500ms;
+ color: white;
+}
+
+.mobile-nav i {
+ z-index: -50;
+ padding: 10px;
+ font-size: 18px;
+ cursor: pointer;
+ position: fixed;
+ right: 10px;
+ top: 55px;
+}
+
+.mobile-menu i:hover {
+ cursor: pointer;
+}
+
+.mobile-nav li {
+ margin-top: 20px;
+ margin-bottom: 10px;
+ font-size: 12px;
+ padding: 5px;
+}
+.mobile-nav li:hover {
+ color: rgb(169, 92, 16);
+}
+
+#menu-overlay {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+}
+body.mobile-nav-open #menu-overlay {
+ display: block;
+}
+
+main,
+section {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+h2 {
+ color: rgb(111, 83, 46);
+ font-size: larger;
+ margin-bottom: 15px;
+ font-weight: bold;
+ font-family: 'Rubik', sans-serif;
+ display: flex;
+ justify-content: center;
+}
+
+/* nav state classes */
+.active-page {
+ color: rgb(135, 74, 13);
+}
+
+main,
+h2 {
+ font-size: 25px;
+}
+/* card */
+.card-section {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5rem;
+ padding: 40px;
+ font-size: 1px;
+}
+
+.card-section h3 {
+ font-size: 20px;
+ margin-bottom: 5px;
+}
+.card-section p {
+ font-size: 18px;
+ margin-bottom: 5px;
+ padding: 30px;
+}
+
+.card {
+ background-color: rgb(147, 85, 24);
+ margin-top: 60px;
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ height: fit-content;
+ width: 100%;
+}
+.card img {
+ width: 100%;
+ position: relative;
+
+ top: -90px;
+ border-radius: 5px;
+}
+.card h3 {
+ color: white;
+ padding: 20px;
+ position: relative;
+ top: -70px;
+ font-size: 25px;
+}
+
+.card p {
+ padding: 15px;
+ position: relative;
+ top: -60px;
+ color: white;
+ font-size: 18px;
+ font-weight: 400;
+}
+
+/* footer */
+footer,
+.footer-content {
+ display: flex;
+ flex-direction: column;
+ margin-top: auto;
+ background-color: rgb(169, 92, 16);
+ border-radius: 2px;
+ padding-left: 20px;
+ color: white;
+ font-weight: 200;
+ padding-bottom: 30px;
+}
+footer a {
+ color: white;
+}
+.footer-content h2 {
+ display: flex;
+ justify-content: flex-start;
+ padding-top: 20px;
+ margin-bottom: 10px;
+ color: white;
+ font-size: 20px;
+}
+
+/* common breakpoints are: 320-480, 481-768, 769-1024, 1025,1200px */
+
+@media (min-width: 320px) {
+ .mobile-menu,
+ i
+ /* #menu-overlay */ {
+  display: block;
+ }
+ .header-nav {
+  display: none;
+ }
+ main {
+  display: flex;
+ }
+}
+@media (min-width: 768px) {
+ .header-nav {
+  display: block;
+ }
+ .mobile-menu {
+  display: none;
+ }
+ h2 {
+  font-size: 25px;
+ }
+
+ .card p {
+  font-size: 20px;
+  padding: 20px;
+ }
+ .card h3 {
+  font-size: 25px;
+ }
+ .card-section {
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+ footer .footer-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10rem;
+ }
+}
+
+@media (min-width: 1024px) {
+ .mobile-nav {
+  display: none;
+ }
+ h2 {
+  font-size: 26px;
+ }
+ .header-nav li {
+  font-size: 20px;
+ }
+
+ .card {
+  max-width: 33%;
+ }
+ .card h3 {
+  font-size: 25px;
+ }
+ .card p {
+  font-size: 20px;
+ }
+ footer .footer-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 18rem;
+ }
+}
