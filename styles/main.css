@@ -221,15 +221,15 @@ iframe {
  margin: auto;
  flex-direction: column;
  padding-bottom: 10px;
+ width: 250px;
 }
 .cortado-details {
- width: 500px;
  padding: 10px 0;
  margin-bottom: 10px;
+ font-size: 50px;
 }
 .cortado-details summary {
- margin-left: 0;
- font-size: 18px;
+ font-size: 80px;
  font-weight: bold;
  display: flex;
  justify-content: center;
@@ -269,16 +269,29 @@ footer a {
 /* common breakpoints are: 320-480, 481-768, 769-1024, 1025,1200px */
 
 @media (min-width: 320px) {
+ body h1 {
+  font-size: 15px;
+ }
+
+ h2 {
+  font-size: 15px;
+ }
  .mobile-menu,
  i
  /* #menu-overlay */ {
   display: block;
+  padding: 5px;
  }
  .header-nav {
   display: none;
  }
- main {
-  display: flex;
+
+ .cortado-details summary {
+  font-size: 14px;
+  width: 100%;
+ }
+ .cortado-details p {
+  width: 100%;
  }
 }
 @media (min-width: 768px) {
@@ -289,34 +302,33 @@ footer a {
   display: none;
  }
  h2 {
-  font-size: 25px;
+  font-size: 20px;
  }
  .coffee-images {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
-  gap: 40px;
+  gap: 30px;
   width: 700px;
   margin-top: 50px;
  }
  .cortado-section {
-  width: 850px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
- }
- .cortado-details summary {
-  font-size: 20px;
- }
- .cortado-details p {
-  font-size: 18px;
   width: 90%;
  }
- iframe {
-  justify-content: space-evenly;
-  width: 350px;
-  padding: 50px;
+ .cortado-details summary {
+  font-size: 18px;
  }
+ .cortado-details p {
+  font-size: 16px;
+ }
+ iframe {
+  width: 350px;
+  padding: 40px;
+ }
+
  footer .footer-content {
   display: flex;
   justify-content: flex-srart;
@@ -346,6 +358,9 @@ footer a {
   width: 500px;
  }
  .cortado-details p {
+  font-size: 20px;
+ }
+ .cortado-details summary {
   font-size: 20px;
  }
  iframe {

@@ -90,8 +90,6 @@ body {
  font-family: sans-serif;
  display: flex;
  flex-direction: column;
-
- min-height: 100%;
 }
 
 body h1 {
@@ -292,6 +290,12 @@ footer a {
 /* common breakpoints are: 320-480, 481-768, 769-1024, 1025,1200px */
 
 @media (min-width: 320px) {
+ h2 {
+  font-size: 15px;
+ }
+ body h1 {
+  font-size: 15px;
+ }
  .mobile-menu,
  i
  /* #menu-overlay */ {
