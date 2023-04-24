@@ -1,18 +1,14 @@
 <!-- @format -->
 
-<!DOCTYPE htm
+<!DOCTYPE html>
 <html lang="en">
  <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta
-   name="viewport"
-   content="width=device-width, 
-    initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="coffee, barista, reccomendations, beans" />
-  <link rel="stylesheet" href="/styles/main.css" />
-
-  <title>Coffee Conoisseur</title>
+  <link rel="stylesheet" href="./styles/contact.css" />
+  <title>Contact</title>
  </head>
  <body>
   <!-- promotion title -->
@@ -46,38 +42,24 @@
 
   <!-- main section -->
   <main>
-   <section class="home-picture-section">
-    <h2>Welcome to the place about everything coffee!</h2>
-    <div class="coffee-images">
-     <img src="./images/coffee1.jpeg" alt="image of a coffee" />
-     <img src="./images/coffee2.jpeg" alt="image of a coffee" />
-     <img src="./images/coffee1.jpeg" alt="image of a coffee" />
-     <img src="./images/coffee2.jpeg" alt="image of a coffee" />
-    </div>
-   </section>
-
-   <section class="cortado-section">
-    <details class="cortado-details">
-     <summary>Why is a Cortado my faviourte coffee drink?</summary>
-     <p>
-      When visiting a new coffee shop, or simply craving a strong coffee, the Cortado is my go to. <br />It allows you
-      to taste the coffee with out it being as milky as a flatwhite! I love to have one at
-      <time datetime="09:00">9am.</time>
-     </p>
-    </details>
-
-    <aside>
-     <iframe
-      width="400px"
-      height="300px"
-      src="https://www.youtube.com/embed/watch?v=7HIGdYy5of4"
-      alt="YouTube video"
-      frameborder="0"
-      allowfullscreen></iframe>
-    </aside>
+   <h2>Get in contact</h2>
+   <!-- working form -->
+   <section>
+    <form action="https://formspree.io/f/xknazede" method="POST" class="contact-form">
+     <label for="fName">First Name</label>
+     <input type="text" name="fName" required />
+     <label for="lName">Last Name</label>
+     <input type="text" name="lName" required />
+     <label for="email"> Email Address </label>
+     <input type="email" name="email" id="email" required />
+     <!-- <span class="invalid"></span> -->
+     <span class="error-message"></span>
+     <label for="message"> Please type your message below</label>
+     <textarea name="message" required></textarea>
+     <button type="submit" value="submit">SEND</button>
+    </form>
    </section>
   </main>
-
   <!-- footer -->
   <footer>
    <section class="footer-content">
@@ -94,7 +76,7 @@
     <div class="footer-contact">
      <h2>Contact Us</h2>
      <address>
-      <p><a href="mailto:latte@cortado.com">latte@cortado.com</a></p>
+      <a href="mailto:latte@cortado.com">latte@cortado.com</a>
       <p><a href="telephone:0947394739">0947394739</a></p>
       14 Flatwhite Close <br />
       Cappucino<br />
@@ -103,6 +85,6 @@
     </div>
    </section>
   </footer>
-  <script src="/scripts/main.js"></script>
+  <script src="./scripts/main.js"></script>
  </body>
 </html>
