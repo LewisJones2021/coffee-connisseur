@@ -1,0 +1,78 @@
+/**
+ * card
+ *
+ * @format
+ */
+
+.recipe-section {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5rem;
+ padding: 40px;
+ font-size: 1px;
+}
+
+.coffee-recipe-card {
+ background-color: rgb(147, 85, 24);
+ margin-top: 60px;
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ height: fit-content;
+ width: 100%;
+}
+
+.coffee-recipe-card img {
+ width: 100%;
+ position: relative;
+ top: -90px;
+ border-radius: 5px;
+}
+.coffee-recipe-card h3 {
+ color: white;
+ padding: 20px;
+ position: relative;
+ top: -70px;
+ font-size: 25px;
+}
+
+.coffee-recipe-card p {
+ padding: 15px 20px;
+ position: relative;
+ top: -60px;
+ color: white;
+ font-size: 18px;
+ font-weight: 400;
+}
+
+/* medida queries */
+@media (min-width: 768px) {
+ .coffee-recipe-card {
+  width: 70vw;
+ }
+ .coffee-recipe-card p {
+  font-size: 20px;
+  padding: 20px;
+ }
+ .coffee-recipe-card h3 {
+  font-size: 25px;
+ }
+ .recipe-section {
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+}
+
+@media (min-width: 1024px) {
+ .coffee-recipe-card {
+  max-width: 33%;
+ }
+ .coffee-recipe-card h3 {
+  font-size: 25px;
+ }
+ .coffee-recipe-card p {
+  font-size: 20px;
+ }
+}

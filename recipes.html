@@ -6,11 +6,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="coffee, barista, reccomendations, beans" />
-  <link rel="stylesheet" href="./styles/contact.css" />
+  <link rel="stylesheet" href="./styles/recipes.css" />
   <link rel="stylesheet" href="./styles/global.css" />
-
-  <title>Contact</title>
+  <title>Recipes</title>
  </head>
  <body>
   <!-- promotion title -->
@@ -31,7 +29,7 @@
 
    <!-- mobile responsive menu -->
    <div class="mobile-menu">
-    <i class="mobile-icon fa-regular fa-bars"></i>
+    <i class="mobile-icon fa-solid fa-bars"></i>
     <div id="menu-overlay"></div>
     <nav class="mobile-nav">
      <ul>
@@ -44,31 +42,28 @@
    </div>
   </header>
 
-  <!-- main section -->
+  <!--main section  -->
   <main>
-   <h2>Get in contact</h2>
-   <!-- working form -->
-   <section>
-    <form action="https://formspree.io/f/xknazede" method="POST" class="contact-form">
-     <label for="fName">First Name</label>
-     <input type="text" name="fName" required />
-     <label for="lName">Last Name</label>
-     <input type="text" name="lName" required />
-     <label for="email"> Email Address </label>
-     <input type="text" name="email" id="email" />
-
-     <span class="error-message"></span>
-     <label for="message"> Please type your message below</label>
-     <textarea name="message" required></textarea>
-     <button type="submit" value="submit">SEND</button>
-    </form>
-   </section>
-   <section class="social-icons">
-    <ul>
-     <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-     <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-     <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-    </ul>
+   <h2>Coffee Recipes</h2>
+   <section class="recipe-section">
+    <div class="coffee-recipe-card">
+     <img src="./images/recipes-images/americano.jpeg" alt="Coffee Scales" />
+     <h3 class="coffee-name"></h3>
+     <p class="coffee-description"></p>
+     <p class="coffee-ingredients">ingredients</p>
+    </div>
+    <div class="coffee-recipe-card">
+     <img src="./images/recipes-images/cappuchino.jpeg" alt="Coffee Scales" />
+     <h3 class="coffee-name"></h3>
+     <p class="coffee-description"></p>
+     <p class="coffee-ingredients">ingredients</p>
+    </div>
+    <div class="coffee-recipe-card">
+     <img src="./images/recipes-images/latte.jpeg" alt="Coffee Scales" />
+     <h3 class="coffee-name">Cortado</h3>
+     <p class="coffee-description"></p>
+     <p class="coffee-ingredients">ingredients</p>
+    </div>
    </section>
   </main>
   <!-- footer -->
@@ -87,7 +82,7 @@
     <div class="footer-contact">
      <h2>Contact Us</h2>
      <address>
-      <a href="mailto:latte@cortado.com">latte@cortado.com</a>
+      <p><a href="mailto:latte@cortado.com">latte@cortado.com</a></p>
       <p><a href="telephone:0947394739">0947394739</a></p>
       14 Flatwhite Close <br />
       Cappucino<br />
@@ -96,8 +91,9 @@
     </div>
    </section>
   </footer>
-  <script src="./scripts/contact.js"></script>
-  <script src="./scripts/main.js"></script>
+
   <script src="https://use.fontawesome.com/88b6b94eb1.js"></script>
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/recipes.js"></script>
  </body>
 </html>

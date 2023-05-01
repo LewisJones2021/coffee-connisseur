@@ -1,209 +1,51 @@
 /** @format */
 
-/* font imports*/
-/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&family=Shadows+Into+Light&display=swap'); */
-
-/* remove browser styles default (CSS reset) */
-
-/* Box sizing rules */
-html {
- box-sizing: border-box;
- height: 100%;
+/* coffee images slideshow */
+coffee-picture-slideshow {
+ width: 50vw;
 }
-*,
-*:before,
-*:after {
- box-sizing: inherit;
-}
-
-/* Remove default margin and padding */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
- margin: 0;
- padding: 0;
-}
-
-/* Set font size and line height */
-body {
- line-height: 1.4;
- font-family: sans-serif;
-}
-
-/* Remove list styles on ul and ol elements */
-ul,
-ol {
- list-style: none;
-}
-
-/* Remove default hyperlink styles */
-a {
- text-decoration: none;
- color: inherit;
-}
-
-/* Set default display to block for all HTML5 elements */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section summary {
- display: block;
-}
-
-/* Set default border to none */
-img,
-video {
- border: none;
-}
-
-/* Set default max-width to 100% */
-img {
- max-width: 100%;
-}
-
-/* Remove outline on focus */
-:focus {
- outline: none;
-}
-
-* {
- margin: 0;
- box-sizing: border-box;
-}
-
-body {
- background-color: rgba(210, 180, 140, 0.585);
- font-family: sans-serif;
- display: flex;
- flex-direction: column;
- min-height: 100%;
-}
-
-body h1 {
- font-size: 20px;
- font-weight: 300;
- background-color: rgb(169, 92, 16);
- display: flex;
- align-items: center;
+.slider {
+ display: grid;
  justify-content: center;
- color: white;
- padding: 10px;
+ height: 500px;
+ position: relative;
 }
 
-header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 15px;
- margin: 5px;
+.slider img {
+ border-radius: 15px;
+ height: 450px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ border: 2px solid white;
 }
 
-.header-nav ul {
- display: flex;
- justify-content: space-between;
+.slider img:first-child {
+ z-index: index 1;
 }
-.header-nav li {
- padding-left: 8px;
- list-style: none;
- text-transform: uppercase;
- font-family: sans-serif;
+
+.slider img:nth-child(2) {
+ z-index: 0;
 }
-.header-nav li:hover {
- color: rgb(169, 92, 16);
+
+.navigation-button {
+ text-align: center;
+ position: relative;
+}
+.dot {
  cursor: pointer;
+ height: 15px;
+ width: 15px;
+ margin: 0 2px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
 }
-.header-img {
- width: 50px;
- height: 50px;
+.active,
+.dot:hover {
+ background-color: rgba(169, 93, 16, 0.872);
 }
-
-.mobile-nav {
- display: none;
- z-index: 50;
- background-color: rgba(0, 0, 0, 0.601);
- position: fixed;
- top: 0;
- left: 0;
- max-width: 30%;
- height: 100vh;
- padding: 10px;
- transition: ease-in-out;
- transition-duration: 500ms;
- color: white;
-}
-
-.mobile-nav i {
- z-index: -50;
- padding: 10px;
- font-size: 18px;
- cursor: pointer;
- position: fixed;
- right: 10px;
- top: 55px;
-}
-
-.mobile-menu i:hover {
- cursor: pointer;
-}
-
-.mobile-nav li {
- margin-top: 20px;
- margin-bottom: 10px;
- font-size: 12px;
- padding: 5px;
-}
-.mobile-nav li:hover {
- color: rgb(169, 92, 16);
-}
-
-#menu-overlay {
- display: none;
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background-color: rgba(0, 0, 0, 0.5);
-}
-body.mobile-nav-open #menu-overlay {
- display: block;
-}
-
-main {
- display: flex;
- flex-direction: column;
- justify-content: center;
-}
-
-h2 {
- color: rgb(111, 83, 46);
- font-size: larger;
- margin-bottom: 15px;
- font-weight: bold;
- font-family: 'Rubik', sans-serif;
- display: flex;
- justify-content: center;
-}
-
-/* nav state classes */
-.active-page {
- color: rgb(135, 74, 13);
-}
-
 .coffee-images {
  margin: auto;
  margin-bottom: 15px;
@@ -211,7 +53,8 @@ h2 {
 }
 .coffee-images img {
  border-radius: 15px;
- border: 2px solid rgba(169, 93, 16, 0.713);
+ border: 1px solid black;
+ margin-top: 10px;
 }
 
 .cortado-section,
@@ -221,7 +64,8 @@ iframe {
  margin: auto;
  flex-direction: column;
  padding-bottom: 10px;
- width: 250px;
+ width: 400px;
+ border-radius: 10px;
 }
 .cortado-details {
  padding: 10px 0;
@@ -229,70 +73,67 @@ iframe {
  font-size: 50px;
 }
 .cortado-details summary {
- font-size: 20px;
+ font-size: 18px;
  font-weight: bold;
  display: flex;
  justify-content: center;
  cursor: pointer;
+ color: rgba(169, 93, 16, 0.872);
 }
 .cortado-details p {
  font-size: 15px;
- color: rgba(169, 93, 16, 0.872);
+ color: white;
  padding: 6px;
  width: 85%;
  margin: auto;
 }
-footer,
-.footer-content {
+.coffee-facts {
  display: flex;
+ justify-content: center;
  flex-direction: column;
- margin-top: auto;
- background-color: rgb(169, 92, 16);
- border-radius: 2px;
- padding-left: 20px;
- color: white;
- font-weight: 200;
- padding-bottom: 30px;
+ margin-bottom: 20px;
 }
-.footer-content h2 {
- display: flex;
- justify-content: flex-start;
- padding-top: 20px;
- margin-bottom: 10px;
- color: white;
+.coffee-facts h1 {
+ background: none;
+ margin: auto;
  font-size: 20px;
- font-weight: bold;
+ font-weight: 400;
+ /* padding: 10px; */
+ color: rgb(177, 97, 17);
 }
-footer a {
+
+.coffee-facts p {
+ margin: auto;
+ margin-bottom: 20px;
+ font-weight: 400;
+ width: 50%;
  color: white;
 }
+
+.coffee-facts button {
+ margin-top: 25px;
+ padding: 5px;
+ width: 150px;
+ margin: auto;
+ background-color: rgb(200, 128, 55);
+ border-radius: 5px;
+ color: white;
+ font-size: 15px;
+ cursor: pointer;
+}
+
+.coffee-facts button:hover {
+ color: rgb(177, 97, 17);
+}
+
 /* common breakpoints are: 320-480, 481-768, 769-1024, 1025,1200px */
 
 @media (min-width: 320px) {
- body h1 {
-  font-size: 15px;
- }
-
  h2 {
-  font-size: 15px;
- }
- .mobile-menu,
- i
- /* #menu-overlay */ {
-  display: block;
-  padding: 5px;
- }
- .header-nav {
-  display: none;
+  font-size: 18px;
  }
 }
 @media (min-width: 768px) {
- .header-nav {
-  display: block;
- }
- .mobile-menu {
-  display: none;
- }
  h2 {
   font-size: 20px;
  }
@@ -309,37 +150,34 @@ footer a {
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 80vw;
+  width: auto;
+  padding-left: 10px;
  }
  .cortado-details summary {
-  font-size: 20px;
+  font-size: 18px;
+  width: 40vw;
+  padding-left: 10px;
  }
  .cortado-details p {
   font-size: 18px;
+  margin: auto;
  }
  iframe {
-  width: 350px;
+  width: 450px;
+  height: 350px;
   padding: 40px;
+  border-radius: 50px;
  }
-
- footer .footer-content {
-  display: flex;
-  justify-content: flex-srart;
-  flex-direction: row;
-  gap: 18rem;
+ .coffee-facts p {
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  margin: auto;
+  margin-bottom: 20px;
  }
 }
 
 @media (min-width: 1024px) {
- .mobile-nav {
-  display: none;
- }
- h2 {
-  font-size: 30px;
- }
- .header-nav li {
-  font-size: 20px;
- }
  .coffee-images {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
@@ -353,22 +191,20 @@ footer a {
   max-width: 50vw;
  }
  .cortado-details summary {
-  font-size: 25px;
+  font-size: 22px;
   width: 30vw;
  }
  .cortado-details p {
   font-size: 20px;
-  width: 20vw;
  }
 
  iframe {
   justify-content: space-evenly;
-  width: 350px;
+  width: 500px;
  }
- footer .footer-content {
-  display: flex;
-  justify-content: flex-srart;
-  flex-direction: row;
-  gap: 18rem;
+ .coffee-facts p {
+  width: auto;
+  margin: auto;
+  margin-bottom: 20px;
  }
 }
