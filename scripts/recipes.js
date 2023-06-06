@@ -78,8 +78,8 @@ function generateCoffee() {
  }
  if (flavourNotes === 'fruity') {
   coffeeBean += 'with fruity notes';
- } else if (flavourNotes === 'chocolaty') {
-  coffeeBean += 'with chocolaty notes';
+ } else if (flavourNotes === 'chocolatey') {
+  coffeeBean += 'with chocolatey notes';
  } else if (flavourNotes === 'nutty') {
   coffeeBean += 'with nutty notes';
  }
