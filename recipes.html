@@ -65,6 +65,33 @@
      <p class="coffee-ingredients">ingredients</p>
     </div>
    </section>
+   <!-- bean generator -->
+   <section class="coffee-generator">
+    <h2 class="coffee-generator h2">What's your perfect cup of coffee...?</h2>
+    <form id="coffee-form">
+     <label for="roast-type">Roast Type:</label>
+     <select id="roast-type">
+      <option value="light">Light</option>
+      <option value="medium">Medium</option>
+      <option value="dark">Dark</option>
+     </select>
+     <label for="flavour-notes">Flavour Notes:</label>
+     <select id="flavour-notes">
+      <option value="fruity">Fruity</option>
+      <option value="chocolaty">Chocolaty</option>
+      <option value="nutty">Nutty</option>
+     </select>
+     <label for="coffee-type">Coffee Type:</label>
+     <select id="coffee-type">
+      <option value="espresso">espresso</option>
+      <option value="filter">Filter</option>
+      <option value="pour-over">Pour Over</option>
+     </select>
+     <button type="button" id="generate-coffee-button">Generate your coffee</button>
+    </form>
+
+    <div id="coffee-result"></div>
+   </section>
   </main>
   <!-- footer -->
   <footer>

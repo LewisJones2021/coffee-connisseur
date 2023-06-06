@@ -23,7 +23,6 @@
  height: fit-content;
  width: 100%;
 }
-
 .coffee-recipe-card img {
  width: 100%;
  position: relative;
@@ -46,6 +45,53 @@
  font-size: 18px;
  font-weight: 400;
 }
+.coffee-generator {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ padding: 15px;
+}
+#coffee-form {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ margin: 0 auto;
+ width: min-content;
+}
+
+#coffee-form select {
+ border: 2px solid rgb(147, 85, 24);
+ color: rgb(178, 96, 14);
+ background-color: inherit;
+ padding: 8px;
+ width: 250px;
+ border-radius: 8px;
+ font-size: 15px;
+}
+
+.coffee-generator label {
+ color: rgb(147, 85, 24);
+ font-size: 20px;
+ margin: 5px;
+}
+#generate-coffee-button {
+ margin: 10px auto;
+ border-radius: 8px;
+ background-color: rgba(169, 93, 16, 0.872);
+ color: white;
+ padding: 8px;
+ font-size: 15px;
+ width: 250px;
+ outline: none;
+ cursor: pointer;
+ text-transform: uppercase;
+ display: flex;
+ justify-content: center;
+}
+#coffee-result {
+ font-size: 12px;
+}
 
 /* medida queries */
 @media (min-width: 768px) {
@@ -62,6 +108,9 @@
  .recipe-section {
   flex-direction: row;
   flex-wrap: wrap;
+ }
+ #coffee-result {
+  font-size: 20px;
  }
 }
 

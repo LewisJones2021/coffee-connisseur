@@ -87,3 +87,32 @@ if (showCoffeeFact) {
   randomCoffeeFacts();
  });
 }
+
+// coffee picker section
+// array of coffee's
+
+const coffeePickerArray = [
+ { coffee: 'Latte' },
+ { coffee: 'Flat White' },
+ { coffee: 'Americano' },
+ { coffee: 'Cappuccino' },
+ { coffee: 'Espresso' },
+ { coffee: 'Iced Latte' },
+ { coffee: 'Macchiato' },
+ { coffee: 'Americano' },
+];
+
+const coffeePlaceholder = document.querySelector('.coffee-generator h3');
+const showCoffeeButton = document.querySelector('.coffee-generator button');
+
+function coffeePicker() {
+ const coffeeIndex = Math.floor(Math.random() * coffeePickerArray.length);
+ const coffeeObject = coffeePickerArray[coffeeIndex];
+ const coffeeName = coffeeObject.coffee;
+ coffeePlaceholder.innerHTML = coffeeName;
+}
+if (showCoffeeButton) {
+ showCoffeeButton.addEventListener('click', () => {
+  coffeePicker();
+ });
+}

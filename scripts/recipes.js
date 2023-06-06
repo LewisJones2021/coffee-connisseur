@@ -46,3 +46,45 @@ const displayCoffeeData = (coffee) => {
   }
  });
 };
+
+// bean generator
+
+const coffeeForm = document.getElementById('coffee-form');
+const generateCoffeeButton = document.getElementById('generate-coffee-button');
+const coffeeBeanResult = document.getElementById('coffee-result');
+
+function generateCoffee() {
+ // get the valeus from the users selected options.
+ const roastType = document.getElementById('roast-type').value;
+ const flavourNotes = document.getElementById('flavour-notes').value;
+ const cofffeeType = document.getElementById('coffee-type').value;
+
+ //  generate the coffee bean based on the selected options.
+ let coffeeBean = '';
+ if (roastType === 'light') {
+  coffeeBean = 'light roast ';
+ } else if (roastType === 'medium') {
+  coffeeBean = 'medium roast ';
+ } else if (roastType === 'dark') {
+  coffeeBean = 'dark roast ';
+ }
+
+ if (cofffeeType === 'espresso') {
+  coffeeBean += 'espresso ';
+ } else if (cofffeeType === 'filter') {
+  coffeeBean += 'filter coffee ';
+ } else if (cofffeeType === 'pour-over') {
+  coffeeBean += 'pour over ';
+ }
+ if (flavourNotes === 'fruity') {
+  coffeeBean += 'with fruity notes';
+ } else if (flavourNotes === 'chocolaty') {
+  coffeeBean += 'with chocolaty notes';
+ } else if (flavourNotes === 'nutty') {
+  coffeeBean += 'with nutty notes';
+ }
+ //  displau the coffee bean.
+
+ coffeeBeanResult.innerHTML = `Your perfect cup of coffee is a <span style="color:rgba(169, 93, 16, 0.872); font-weight:bold">${coffeeBean} </span>`;
+}
+generateCoffeeButton.addEventListener('click', generateCoffee);

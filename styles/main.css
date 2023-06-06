@@ -4,7 +4,7 @@
 .sub-heading {
  color: rgb(111, 83, 46);
  margin: auto;
- font-weight: bolder;
+ font-weight: 400;
  letter-spacing: 1px;
 }
 
@@ -120,19 +120,40 @@ iframe {
 }
 
 .coffee-facts button {
- margin-top: 25px;
- padding: 5px;
- width: 150px;
- margin: auto;
- background-color: rgb(200, 128, 55);
- border-radius: 5px;
+ margin: 10px auto;
+ border-radius: 8px;
+ background-color: rgba(169, 93, 16, 0.872);
  color: white;
+ padding: 8px;
  font-size: 15px;
+ width: 150px;
+ outline: none;
  cursor: pointer;
 }
 
-.coffee-facts button:hover {
- color: rgb(177, 97, 17);
+.coffee-generator {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: auto;
+ padding: 2px;
+}
+.coffee-generator h3 {
+ color: rgba(169, 93, 16, 0.872);
+ font-size: 22px;
+ font-weight: 400;
+}
+.coffee-generator button {
+ margin: 10px;
+ border-radius: 8px;
+ background-color: rgba(169, 93, 16, 0.872);
+ color: white;
+ padding: 8px;
+ font-size: 15px;
+ outline: none;
+ cursor: pointer;
+ text-transform: uppercase;
 }
 
 /* common breakpoints are: 320-480, 481-768, 769-1024, 1025,1200px */
@@ -186,7 +207,14 @@ iframe {
   color: white;
   margin: auto;
   margin-bottom: 20px;
+  max-width: 80%;
  }
+ .coffee-generator h3 {
+  font-size: 22px;
+ }
+ /* .coffee-generator button {
+  font-size: 18px;
+ } */
 }
 
 @media (min-width: 1024px) {
