@@ -16,7 +16,7 @@
  background-color: #c87c1f;
  position: absolute;
  left: 50%;
- top: 58%;
+ top: 60%;
  transform: translate(-50%, -50%);
  border-radius: 12px;
 }
@@ -148,8 +148,8 @@ footer {
   height: fit-content;
  }
  .controls-container {
-  top: 660px;
-  height: 910px;
+  top: 685px;
+  height: 950px;
  }
  .card-container {
   width: 70px;
