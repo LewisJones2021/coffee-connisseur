@@ -5,7 +5,7 @@
  font-size: 24px;
  margin-bottom: 10px;
  padding-bottom: 20px;
- color: rgb(169, 92, 16);
+ color: rgb(93, 80, 60);
 }
 .controls-container {
  display: flex;
@@ -13,7 +13,7 @@
  justify-content: center;
  width: 600px;
  height: 630px;
- background-color: #c87c1f;
+ background-color: #b3752acc;
  position: absolute;
  left: 50%;
  top: 60%;
@@ -23,7 +23,7 @@
 .game-wrapper {
  box-sizing: content-box;
  width: 24em;
- height: 33rem;
+ height: 32rem;
  padding: 2.5em 3em;
  background-color: #ffffff;
  margin: auto;
@@ -102,7 +102,7 @@ button {
  border-radius: 0.3em;
  padding: 12px;
  cursor: pointer;
- background-color: #d89e2974;
+ background-color: rgb(142, 99, 35);
  color: #ffffff;
  font-weight: bolder;
  text-transform: uppercase;
@@ -110,15 +110,15 @@ button {
 #stop-button {
  font-size: 1.1em;
  display: block;
- margin: 1.1em auto 0 auto;
- background-color: rgb(233, 158, 46);
+ margin: 0.5rem auto 0 auto;
+ background-color: rgb(142, 99, 35);
  color: white;
  border: 3px solid black;
  border-radius: 10px;
 }
 .controls-container button {
  font-size: 1.3em;
- box-shadow: 0 0.6em 2em rgba(86, 66, 0, 5);
+ /* box-shadow: 0 0.6em 2em rgba(86, 66, 0, 5); */
 }
 .hide {
  display: none;
@@ -166,7 +166,7 @@ footer {
 
 @media (min-width: 768px) {
  .controls-container {
-  top: 520px;
+  top: 530px;
   width: 550px;
  }
 }

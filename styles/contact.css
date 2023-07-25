@@ -9,7 +9,7 @@
  padding: 20px;
  width: 380px;
  border-radius: 10px;
- background-color: rgb(169, 92, 16);
+ background-color: rgba(185, 98, 5, 0.783);
 }
 
 .contact-form label {
@@ -17,11 +17,12 @@
  font-weight: 400;
  color: white;
  margin: 10px 5px;
+ font-style: italic;
 }
 .contact-form input {
  padding: 5px;
  border-radius: 5px;
- background-color: rgba(210, 180, 140, 0.585);
+ background-color: rgba(210, 180, 140, 0.858);
  font-size: 18px;
  color: white;
  outline: transparent;
@@ -91,6 +92,7 @@ input:focus.invalid {
  justify-content: center;
  align-items: center;
  width: auto;
+ padding-bottom: 20px;
 }
 .social-icons ul {
  display: flex;

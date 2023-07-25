@@ -27,7 +27,7 @@
  width: 100%;
  position: relative;
  top: -90px;
- border-radius: 5px;
+ border-radius: 8px;
 }
 .coffee-recipe-card h3 {
  color: white;
@@ -78,7 +78,7 @@
 #generate-coffee-button {
  margin: 10px auto;
  border-radius: 8px;
- background-color: rgba(169, 93, 16, 0.872);
+ background-color: rgb(142, 99, 35);
  color: white;
  padding: 8px;
  font-size: 15px;
