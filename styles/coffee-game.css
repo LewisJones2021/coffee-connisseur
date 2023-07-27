@@ -101,6 +101,7 @@ button {
  border: none;
  border-radius: 0.3em;
  padding: 12px;
+ margin-top: 45px;
  cursor: pointer;
  background-color: rgb(142, 99, 35);
  color: #ffffff;
@@ -110,7 +111,7 @@ button {
 #stop-button {
  font-size: 1.1em;
  display: block;
- margin: 0.5rem auto 0 auto;
+ margin: 10px auto;
  background-color: rgb(142, 99, 35);
  color: white;
  border: 3px solid black;
@@ -168,5 +169,8 @@ footer {
  .controls-container {
   top: 530px;
   width: 550px;
+ }
+ #stop-button {
+  margin-top: 0px;
  }
 }
